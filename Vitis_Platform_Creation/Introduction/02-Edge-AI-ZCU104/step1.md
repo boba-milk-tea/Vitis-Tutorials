@@ -12,9 +12,9 @@
       cc)  ( ) Create project subdirectory <br />
    d) Click ***Next***.<br />
    e) Leaving all the setting to default until you goto the Default Part dialog.<br />
-      ee)  (Check) RTL Project
-      ee)  (Check) Do not specify sources at this time
-      ee)  (Check) Project is an extensible Vitis platform
+      ee)  (Check) RTL Project<br />
+      ee)  (Check) Do not specify sources at this time<br />
+      ee)  (Check) Project is an extensible Vitis platform<br />
    f) Select ***Boards*** tab and then select ***Zynq UltraScale+ ZCU106 Evaluation Board***<br />
    g) Click ***Next***, and your project summary should like below:<br />
    ![vivado_project_summary.png](./images/vivado_project_summary.png)<br />
