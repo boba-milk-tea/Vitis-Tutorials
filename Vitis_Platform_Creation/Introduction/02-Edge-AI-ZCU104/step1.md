@@ -9,7 +9,7 @@
    a) Select ***File->Project->New***.<br />
    b) Click ***Next***.<br />
    c) In Project Name dialog set Project name to ```zcu106_custom_platform```.<br />
-      cc)  (check) Create project subdirectory <br />
+      cc)  ( ) Create project subdirectory <br />
    d) Click ***Next***.<br />
    e) Leaving all the setting to default until you goto the Default Part dialog.<br />
       ee)  (Check) RTL Project
