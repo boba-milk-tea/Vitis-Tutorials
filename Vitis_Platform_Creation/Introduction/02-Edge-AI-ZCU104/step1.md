@@ -8,7 +8,8 @@
 
    a) Select ***File->Project->New***.<br />
    b) Click ***Next***.<br />
-   c) In Project Name dialog set Project name to ```zcu104_custom_platform```.<br />
+   c) In Project Name dialog set Project name to ```zcu106_custom_platform```.<br />
+      cc)  (check) Create project subdirectory <br />
    d) Click ***Next***.<br />
    e) Leaving all the setting to default until you goto the Default Part dialog.<br />
    f) Select ***Boards*** tab and then select ***Zynq UltraScale+ ZCU104 Evaluation Board***<br />
