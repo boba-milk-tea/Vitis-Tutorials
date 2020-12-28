@@ -212,8 +212,8 @@ set_property SELECTED_SIM_MODEL tlm [get_bd_cells /zynq_ultra_ps_e_0]
 3. Select ***Let Vivado manage wrapper and auto-update***. Click OK to generate wrapper for block design.
 4. Select ***Generate Block Design*** from Flow Navigator
 5. Select ***Synthesis Options*** to ***Global*** and click ***Generate***. This will skip IP synthesis.
-6. Click menu ***File -> Export -> Export Hardware*** to Export Platform from Vitis GUI
-7. Select Platform Type: ***Expandable***, click Next
+6. Click menu ***File -> Export -> Export Platform*** to Export Platform from Vitis GUI
+7. Select Platform Type: ***Hardware and hardware emulation***, click Next
 8. Select Platform Stage: ***Pre-synthesis***, click Next
 9. Input Platform Properties and click ***Next***. For example,
    - Name: zcu104_custom_platform
@@ -221,8 +221,8 @@ set_property SELECTED_SIM_MODEL tlm [get_bd_cells /zynq_ultra_ps_e_0]
    - Board: zcu104
    - Version: 0.0
    - Description: This platform provides high PS DDR bandwidth and three clocks: 100MHz, 200MHz and 400MHz.
-10. Fill in XSA file name: ***zcu104_custom_platform***, export directory: ***<your_vivado_design_dir>***
-11. Click ***Finish***. zcu104_custom_platform.xsa will be generated. You can exit Vivado now. 
+10. Fill in XSA file name: ***zcu106_custom_platform***, export directory: ***<your_vivado_design_dir>***
+11. Click ***Finish***. zcu106_custom_platform.xsa will be generated. You can exit Vivado now. 
 
 Alternatively, the above export can be done in Tcl scripts
 
@@ -236,7 +236,7 @@ set_property platform.design_intent.datacenter "false" [current_project]
 # Write pre-synthesis expandable XSA
 write_hw_platform -force -file ./zcu104_custom_platform.xsa
 # Or uncomment command below to write post-implementation expandable XSA
-# write_hw_platform -unified -include_bit ./zcu104_custom_platform.xsa
+# write_hw_platform -unified -include_bit ./zcu106_custom_platform.xsa
 ```
 
 ***Now we finish the Hardware platform creation flow, then we should go to the [Step2: Software platform creation](./step2.md)***
