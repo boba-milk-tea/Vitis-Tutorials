@@ -156,24 +156,25 @@ V++ linker can automatically link the interrupt signals between kernel and platf
     ![ipi_fully_connection.png](./images/ipi_fully_connection.png)
 
 
-### Configuring Platform Interface Properties
+### Configuring Platform Setup Properties
 
-1. Click ***Window->Platform interfaces***, and then click ***Enable platform interfaces*** link to open the ***Platform Interfaces*** Window.
+1. Click ***Window->Platform Setup***, to open the ***Platform Setup*** Window. In Settings column, select "AXI Port".
 
-2. Select ***Platform-system->zynq_ultra_ps_e_0->S_AXI_HP0_FPD***, in ***Platform interface Properties*** tab enable the ***Enabled*** option like below:<br />
-   ![enable_s_axi_hp0_fpd.png](./images/enable_s_axi_hp0_fpd.png)
-
-3. Select ***Options*** tab, set ***memport*** to ```S_AXI_HP``` and set ***sptag*** to ```HP0``` like below:
-   ![set_s_axi_hp0_fpd_options.png](./images/set_s_axi_hp0_fpd_options.png)</br>
+2. Select ***zynq_ultra_ps_e_0->S_AXI_HP0_FPD***, in ***Platform Setup*** tab enable the ***Enabled*** option<br />
+   
+3. In the ***Memport*** column, set to ```S_AXI_HP``` and in ***SP Tag*** column, set to ```HP0``` like below:
+   ![set_s_axi_hp0_fpd_options_v2020p2.png](./images/set_s_axi_hp0_fpd_options_v2020p2.png)</br>
    ***Note***: changing sptag requires you to hit ENTER or move to another line in order for it to be saved.
 
 4. Do the same operations for ***S_AXI_HP1_FPD, S_AXI_HP2_FPD, S_AXI_HP3_FPD, S_AXI_HPC0_FPD, S_AXI_HPC1_FPD*** and set ***sptag*** to ```HP1```, ```HP2```, ```HP3```, ```HPC0```, ```HPC1```. And be noticed that for HPC0/HPC1 ports the ***memport*** is set to ```S_AXI_HPC``` in default, but actually we would use these ports without data coherency function enabled to get a high performance. So please modify it into ```S_AXI_HP``` manually.<br />
-   ![set_s_axi_hpc0_fpd_options.png](./images/set_s_axi_hpc0_fpd_options.png)<br />
+   ![set_s_axi_hpc0_fpd_options_v2020p2.png](./images/set_s_axi_hpc0_fpd_options_v2020p2.png)<br />
 
-5. Enable the M01_AXI ~ M08_AXI ports of ps8_0_axi_periph IP(The AXI Interconnect between M_AXI_HPM0_LPD and axi_intc_0), and set these ports with the same ***sptag*** name to ```HPM0_LPD``` and ***memport*** type to ```M_AXI_GP```
+5. Enable the M01_AXI ~ M08_AXI ports of ps8_0_axi_periph IP(The AXI Interconnect between M_AXI_HPM0_LPD and axi_intc_0), and set these ports with the same ***SP Tag*** name to ```HPM0_LPD``` and ***Memport*** type to ```M_AXI_GP```
+   ![set_m_axi_gp_options_v2020p2.png](./images/set_m_axi_gp_options_v2020p2.png)<br />
 
-6. Enable the ***M_AXI_HPM0_FPD*** and ***M_AXI_HPM1_FPD*** ports, set ***sptag*** name to ```HPM0_FPD```, ```HPM1_FPD``` and ***memport*** to ```M_AXI_GP```.
-
+6. Enable the ***M_AXI_HPM0_FPD*** and ***M_AXI_HPM1_FPD*** ports, set ***SP Tag*** name to ```HPM0_FPD```, ```HPM1_FPD``` and ***Memport*** to ```M_AXI_GP```.
+   ![set_m_axi_hpm_fpd_options_v2020p2.png](./images/set_m_axi_hpm_fpd_options_v2020p2.png)<br />
+   
 7. Save the design with ***Ctrl+S***.
 
 ***Now we have enabled AXI master/slave interfaces that can be used for Vitis tools on the platform***
