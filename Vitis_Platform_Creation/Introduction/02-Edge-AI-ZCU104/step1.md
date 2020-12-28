@@ -12,7 +12,10 @@
       cc)  (check) Create project subdirectory <br />
    d) Click ***Next***.<br />
    e) Leaving all the setting to default until you goto the Default Part dialog.<br />
-   f) Select ***Boards*** tab and then select ***Zynq UltraScale+ ZCU104 Evaluation Board***<br />
+      ee)  (Check) RTL Project
+      ee)  (Check) Do not specify sources at this time
+      ee)  (Check) Project is an extensible Vitis platform
+   f) Select ***Boards*** tab and then select ***Zynq UltraScale+ ZCU106 Evaluation Board***<br />
    g) Click ***Next***, and your project summary should like below:<br />
    ![vivado_project_summary.png](./images/vivado_project_summary.png)<br />
    h) Then click ***Finish***<br />
@@ -96,14 +99,14 @@
    Then the connection should like below:<br />
    ![clk_rst_connection.png](./images/clk_rst_connection.png)
 
-5. Click ***Window->Platform interfaces***, and then click ***Enable platform interfaces*** link to open the ***Platform Interfaces*** Window.
+5. Click ***Window->Platform Setup***, and then click ***Enable platform interfaces*** link to open the ***Platform Interfaces*** Window.
 
 6. Setup properties for clock outputs of clk_wiz_0.
 
-   a) Select each clock under clk_wiz_0 in the Platform Interface Properties<br />
-   b) In the General tab, enable it<br />
-   c) In the Options tab, set the ***id***'s of clk_{100,200,400}m to {2,1,0}, and enable ***is_default*** for clk_200m only<br />
-   ![](./images/platform_clock.png)
+   a) "Platform Setup" Tab, in "Settings" Column, select "Clock"<br />
+   b) In the "Clock" tab, "Enabled" column, check "Enable" for clk_100m,clk_200m,clk_400m<br />
+   c) In the "ID" column, set the ***id***'s of clk_{100,200,400}m to {2,0,1}, and check ***is_default*** for clk_200m only<br />
+   ![](./images/platform_clock_v2020p2.png)
 
    ***Now we have added clock and reset IPs and enabled them for kernels to use***
 
